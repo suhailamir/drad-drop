@@ -1,0 +1,21 @@
+<h1>Predict the Top 10</h1>
+<p>To pick click on names on the left side, to un pick click on the names on right side</p>
+<button *ngIf="selectedPlayers.length >= 10" (click)="submitSelectedPlayers()">Submit</button>
+<div class="container">
+  <div class="players-list">
+    <h3>All Players</h3>
+    <ul class="players-list">
+      <li *ngFor="let player of allPlayers" (click)="onSelectPlayer(player)">{{player}}</li>
+    </ul>
+  </div>
+
+
+
+  <div class="selected-players-list">
+    <h3>Selected Players</h3>
+    <ul class="players-list">
+      <li *ngFor="let player of selectedPlayers" (click)="onDeSelectPlayer(player)">{{player}}</li>
+    </ul>
+  </div>
+
+</div>
